@@ -20,34 +20,3 @@
 @import "sections/section-posts";
 
 @import "footer";
-
-@media (min-width: 992px) {
-  h2 {
-    margin-bottom: 56px;
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 992px) {
-  .about__content p {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .about {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-@media (min-width: 992px) {
-  .about__container {
-    gap: 100px;
-    grid-template-columns: 1fr 271px;
-  }
-}
-
-@media (min-width: 992px) {
-  .about__content p:first-of-type::after {
-    right: -50px;
-  }
-}

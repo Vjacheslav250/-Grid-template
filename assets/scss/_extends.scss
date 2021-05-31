@@ -4,6 +4,7 @@
   padding-right: $gap;
   padding-left: $gap;
 }
+
 %section {
   @include lg-min {
     padding-top: $gap * 5;
@@ -22,6 +23,7 @@
     margin-top: 0;
   }
 }
+
 %btn-container {
   @include sm-min {
     display: flex;
