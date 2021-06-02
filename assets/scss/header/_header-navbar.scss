@@ -1,4 +1,6 @@
 .header-navbar {
+  letter-spacing: 0.1em;
+
   @include md {
     display: flex;
     justify-content: flex-end;
@@ -64,7 +66,6 @@
       }
     }
   }
-  letter-spacing: 0.1em;
 
   &__list {
     @include unlist(0 (-$gap) 0 0);

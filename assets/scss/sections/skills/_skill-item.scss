@@ -1,20 +1,23 @@
 .skill-item {
   position: relative;
 
+  display: grid;
   overflow: hidden;
+  align-items: center;
 
-  &:hover {
-    .skill-item__overlay {
-      opacity: 0.95 !important;
-    }
+  padding: $gap;
 
-    .skill-item__image {
-      transform: scale(1.1);
-    }
+  justify-items: center;
 
-    .skill-item__link {
-      color: $color-accent;
-    }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: $gap;
+
+    transition: color 0.5s;
   }
 
   &__overlay {
@@ -27,11 +30,12 @@
 
     @include abs-position;
   }
+
   &__image {
     transition: transform 0.5s;
 
     background-color: $color-primary;
-    background-position: center;
+    background-position: 50% 50%;
     background-size: cover;
 
     @include abs-position;
@@ -52,16 +56,19 @@
       font-size: 1.125rem;
     }
   }
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    width: 100%;
-    height: 100%;
-    padding: $gap;
+  &:hover {
+    .skill-item__overlay {
+      opacity: 0.95 !important;
+    }
 
-    transition: color 0.5s;
+    .skill-item__image {
+      transform: scale(1.1);
+    }
+
+    .skill-item__link {
+      color: $color-accent;
+    }
   }
 }
 
