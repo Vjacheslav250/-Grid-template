@@ -365,8 +365,6 @@ template {
 }
 
 html {
-  overflow-y: scroll;
-  letter-spacing: 0.1em;
   color: #637588;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -386,15 +384,15 @@ h2 {
   line-height: 1.2em;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 h3 {
   letter-spacing: 0.05em;
   color: #637588;
   font-size: 1.125rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 p {
@@ -415,10 +413,14 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  height: 60px;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.1em;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.125rem;
 }
 
 .btn:hover, .btn:focus {
@@ -426,15 +428,13 @@ input:focus {
 }
 
 .btn--light {
-  border: 2px solid #ffffff;
+  border-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn--primary {
-  height: 60px;
-  border: 2px solid #2d3651;
+  border-color: #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
-  font-size: 1.125rem;
 }
 
 .header {
@@ -478,6 +478,8 @@ input:focus {
 }
 
 .header-logo {
+  -ms-flex-item-align: center;
+      align-self: center;
   letter-spacing: 0.22em;
   font-size: 1.5rem;
 }
@@ -492,6 +494,10 @@ input:focus {
   margin-right: 4px;
   padding: 14px 1px 13px 5px;
   border: 3px solid #d53d27;
+}
+
+.header-navbar {
+  letter-spacing: 0.1em;
 }
 
 .header-navbar__btn {
@@ -658,7 +664,7 @@ input:focus {
 }
 
 .skill-item__title {
-  z-index: 2;
+  z-index: 1;
   margin: 0;
   letter-spacing: 0.1em;
   position: absolute;
@@ -968,9 +974,6 @@ input:focus {
   .posts__actions .btn--primary {
     min-width: 350px;
   }
-  .btn--primary {
-    min-width: 350px;
-  }
   .skills {
     padding: 10px;
     padding-bottom: 40px;
@@ -1020,8 +1023,6 @@ input:focus {
   }
   .btn--light {
     min-width: 250px;
-    height: 60px;
-    font-size: 1.125rem;
   }
   .header-content__title {
     margin: 0 0 53px 0;
@@ -1061,6 +1062,7 @@ input:focus {
   .btn--light {
     min-width: 200px;
     height: 50px;
+    font-size: 1rem;
   }
   .header-content__title {
     margin: 0 0 43px 0;
@@ -1089,10 +1091,6 @@ input:focus {
   }
   h1 {
     font-size: 1.875rem;
-  }
-  .btn--light {
-    min-width: 170px;
-    height: 40px;
   }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
@@ -1129,6 +1127,12 @@ input:focus {
     margin-bottom: 36px;
     font-size: 1.5rem;
   }
+  .btn--light {
+    min-width: 170px;
+    height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
   .skills__container {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
@@ -1164,12 +1168,14 @@ input:focus {
   }
   h2 {
     margin-bottom: 36px;
-    font-size: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
   }
-  .btn--primary {
-    width: 100%;
-    min-width: auto;
+  .btn--light {
+    min-width: 170px;
+    height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
   }
   .header-content__actions {
     -webkit-box-align: center;
