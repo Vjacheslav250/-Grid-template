@@ -30,23 +30,21 @@
 
       background-color: rgba($color-light, 0.1);
     }
-  }
+    a {
+      display: block;
 
-  a {
-    display: block;
+      padding: $gap / 2;
 
-    padding: $gap / 2;
+      transition: color 0.5s;
 
-    transition: color 0.5s;
-
-    &:hover,
-    &:focus {
-      color: $color-accent;
+      &:hover,
+      &:focus {
+        color: $color-accent;
+      }
     }
-  }
-
-  .fab {
-    font-size: 36px;
+    .fab {
+      font-size: 36px;
+    }
   }
 
   &__copy {
